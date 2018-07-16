@@ -36,7 +36,6 @@ export class CustomSerializer
     }
     const { params } = state;
 
-    console.log('CustomSerializer', url, queryParams, params);
     return { url, queryParams, params };
   }
 }

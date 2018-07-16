@@ -16,7 +16,6 @@ export function reducer(
   state = initialState,
   action: fromPizzas.PizzasAction,
 ): PizzaState {
-  console.log('reducer', state);
   switch (action.type) {
     case fromPizzas.LOAD_PIZZAS: {
       return {
@@ -26,7 +25,6 @@ export function reducer(
     }
 
     case fromPizzas.LOAD_PIZZAS_SUCCESS: {
-      console.log('LOAD_PIZZAS_SUCCESS', action.payload);
       const pizzas = action.payload;
       const entities = pizzas.reduce(
         (entities: { [id: number]: Pizza }, pizza) => {

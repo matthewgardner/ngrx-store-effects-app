@@ -18,7 +18,6 @@ export function reducer(
   state = initialState,
   action: fromToppings.ToppingsAction,
 ): ToppingsState {
-  console.log('Toppings reducer', state);
   switch (action.type) {
     case fromToppings.VISUALISE_TOPPINGS: {
       const selectedToppings = action.payload;
@@ -36,7 +35,6 @@ export function reducer(
     }
 
     case fromToppings.LOAD_TOPPINGS_SUCCESS: {
-      console.log('LOAD_PIZZAS_SUCCESS', action.payload);
       const toppings = action.payload;
       const entities = toppings.reduce(
         (entities: { [id: number]: Topping }, topping) => {
